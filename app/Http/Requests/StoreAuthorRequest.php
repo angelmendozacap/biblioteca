@@ -28,4 +28,17 @@ class StoreAuthorRequest extends FormRequest
             'dob' => 'required',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'El nombre del autor es requerido',
+            'dob.required'  => 'El día de nacimiento del autor es requerido',
+        ];
+    }
 }
