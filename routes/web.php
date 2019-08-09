@@ -16,3 +16,11 @@ Route::patch('/books/{book}-{slug}', 'BooksController@update')->name('books.upda
 Route::delete('/books/{book}-{slug}', 'BooksController@destroy')->name('books.delete');
 
 Route::post('/author', 'AuthorsController@store');
+
+Route::post('/checkout/{book}', 'CheckoutBookController@store');
+Route::post('/checkin/{book}', 'CheckinBookController@store');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
